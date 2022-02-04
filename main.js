@@ -7,7 +7,9 @@ Vue.config.productionTip = false;
 //pass the directive tag then a function where you get el which is a bound element
 Vue.directive("rainbow", (el) => {
     el.innerHTML = el.innerHTML.toUpperCase();
-    el.style.color = "#" + Math.random().toString().slice(2, 8);
+    setInterval(() => {
+        el.style.color = "#" + Math.random().toString().slice(2, 8);
+    }, 500);
 });
 
 new Vue({
