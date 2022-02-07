@@ -9,7 +9,7 @@ Vue.directive("rainbow", (el) => {
     el.innerHTML = el.innerHTML.toUpperCase();
     setInterval(() => {
         el.style.color = "#" + Math.random().toString().slice(2, 8);
-    }, 500);
+    }, 1000);
 });
 
 new Vue({

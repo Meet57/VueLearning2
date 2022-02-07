@@ -1,7 +1,7 @@
 <template>
     <div>
         <Input :value="value" @input="$emit('input', $event.target.value)"></Input>
-        {{ value }}
+        {{ value | capital }}
     </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
     model: {
         prop: "value",
         event: "input",
+    },
+    filters: {
+        capital(value) {
+            return value.toUpperCase();
+        },
     },
 };
 </script>
